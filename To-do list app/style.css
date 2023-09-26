@@ -81,6 +81,8 @@ button {
   opacity: 0.6;
 }
 
+/* TASK LIST */
+
 main {
   flex: 1 1 0%;
   padding: 2rem 1rem;
@@ -109,6 +111,10 @@ main {
   margin-bottom: 1rem;
 }
 
+.content {
+  flex: 1 1 0%;
+}
+
 #tasks .task .content .text {
   color: var(--light);
   font-size: 1.125rem;
@@ -119,4 +125,36 @@ main {
 
 #tasks .task .content .text:not(:read-only) {
   color: var(--pink);
+}
+
+#tasks .task .actions {
+  display: flex;
+  margin: 0 --0.5rem;
+}
+
+.task .actions button {
+  cursor: pointer;
+  margin: 0 0.5rem;
+  font-size: 1.125rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  transform: 0.4s;
+}
+
+.task .actions button:hover {
+  opacity: 0.8;
+}
+
+.task .actions button:active {
+  opacity: 0.6;
+}
+
+.task .actions .edit {
+  background-image: linear-gradient(to right, var(--pink), var(--purple));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.task .actions .delete {
+  color: crimson;
 }
