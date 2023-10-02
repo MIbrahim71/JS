@@ -203,8 +203,20 @@ btnLoan.addEventListener('click', function (e) {
   e.preventDefault();
   const amount = Number(inputLoanAmount.value);
   // Any deposits are greater than 10% of loan request, then accept
-  if (amount > 0 && currentAccount.movements.some(mov => mov >= amount * 0.1)) {
-    inputLoanAmount;
+  if (
+    amount > 0 &&
+    amount < 5000 &&
+    currentAccount.movements.some(mov => mov >= amount * 0.1)
+  ) {
+    // Update movements
+    currentAccount.movements.push(amount);
+    // Update UI
+    updateUI(currentAccount);
+    // Clear input field
+    inputLoanAmount.value = '';
+    inputLoanAmount.blur();
+  } else {
+    alert('Request cannot be accepted at this time');
   }
 });
 
@@ -358,3 +370,12 @@ const account = accounts.find(acc => acc.owner === 'Jessica Davis');
 
 const anyDeposits = movements.some(mov => mov < 100);
 console.log(anyDeposits);
+
+const everyDeposits = account4.movements.every(mov => mov > 0);
+console.log(everyDeposits);
+
+const deposit = mov => mov > 0;
+
+console.log(movements.some(deposit));
+console.log(movements.every(deposit));
+console.log(movements.filter(deposit));
