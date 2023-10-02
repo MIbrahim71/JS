@@ -196,19 +196,42 @@ btnTransfer.addEventListener('click', function (e) {
     updateUI(currentAccount);
   }
 });
+//
 
-// Close account
+// REQUEST LOAN
+btnLoan.addEventListener('click', function (e) {
+  e.preventDefault();
+  const amount = Number(inputLoanAmount.value);
+  // Any deposits are greater than 10% of loan request, then accept
+  if (amount > 0 && currentAccount.movements.some(mov => mov >= amount * 0.1)) {
+    inputLoanAmount;
+  }
+});
+
+// CLOSE ACCOUNT
 
 btnClose.addEventListener('click', function (e) {
   e.preventDefault();
-  console.log('delete');
 
   if (
-    inputCloseUsername.value == currentAccount.username &&
-    inputClosePin.value == currentAccount.pin
+    // Check if username & pin match currentAcount details
+    inputCloseUsername.value === currentAccount.username &&
+    Number(inputClosePin.value) === currentAccount.pin
   ) {
     console.log('Closed');
+
+    // Find index of username and splice from accounts array (delete)
+    const index = accounts.findIndex(
+      acc => acc.username === currentAccount.username
+    );
+    accounts.splice(index, 1);
+
+    // Hide UI
+    containerApp.style.opacity = 0;
   }
+
+  inputCloseUsername.value = inputClosePin.value = '';
+  inputTransferAmount.blur();
 });
 
 /////////////////////////////////////////////////
@@ -330,3 +353,8 @@ const firstWithdrawal = movements.find(mov => mov < 0);
 
 const account = accounts.find(acc => acc.owner === 'Jessica Davis');
 // console.log(account);
+
+// Some & every method
+
+const anyDeposits = movements.some(mov => mov < 100);
+console.log(anyDeposits);
