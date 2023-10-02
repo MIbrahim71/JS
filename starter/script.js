@@ -197,6 +197,20 @@ btnTransfer.addEventListener('click', function (e) {
   }
 });
 
+// Close account
+
+btnClose.addEventListener('click', function (e) {
+  e.preventDefault();
+  console.log('delete');
+
+  if (
+    inputCloseUsername.value == currentAccount.username &&
+    inputClosePin.value == currentAccount.pin
+  ) {
+    console.log('Closed');
+  }
+});
+
 /////////////////////////////////////////////////
 /////////////////////////////////////////////////
 // LECTURES
