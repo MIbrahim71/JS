@@ -63,10 +63,14 @@ const inputClosePin = document.querySelector('.form__input--pin');
 
 // DISPLAY BANK ACTIVITY
 
-const displayMovements = function (movements) {
+const displayMovements = function (movements, sort = false) {
   //CLEAR CONTAINER
   containerMovements.innerHTML = '';
-  movements.forEach(function (mov, i) {
+
+  // When sort is true, slice then sort (create copy then sort)
+  const movs = sort ? movements.slice().sort((a, b) => a - b) : movements;
+
+  movs.forEach(function (mov, i) {
     // UPDATE CONTAINER
     const type = mov > 0 ? 'deposit' : 'withdrawal';
     const html = `
@@ -246,6 +250,14 @@ btnClose.addEventListener('click', function (e) {
   inputTransferAmount.blur();
 });
 
+let sorted = false;
+btnSort.addEventListener('click', function (e) {
+  e.preventDefault();
+  displayMovements(currentAccount.movements, !sorted);
+  // Every click event, sorted alternates between true & false
+  sorted = !sorted; // allows to go back to normal sort
+});
+
 /////////////////////////////////////////////////
 /////////////////////////////////////////////////
 // LECTURES
@@ -368,14 +380,44 @@ const account = accounts.find(acc => acc.owner === 'Jessica Davis');
 
 // Some & every method
 
-const anyDeposits = movements.some(mov => mov < 100);
-console.log(anyDeposits);
+// const anyDeposits = movements.some(mov => mov < 100);
+// console.log(anyDeposits);
 
-const everyDeposits = account4.movements.every(mov => mov > 0);
-console.log(everyDeposits);
+// const everyDeposits = account4.movements.every(mov => mov > 0);
+// console.log(everyDeposits);
 
-const deposit = mov => mov > 0;
+// const deposit = mov => mov > 0;
 
-console.log(movements.some(deposit));
-console.log(movements.every(deposit));
-console.log(movements.filter(deposit));
+// console.log(movements.some(deposit));
+// console.log(movements.every(deposit));
+// console.log(movements.filter(deposit));
+
+// flat , flatMap
+const arr1 = [[1, 2, 3], [4, 5, 6], 7, 8];
+
+const flatArr = arr1.flat();
+
+// console.log(flatArr);
+
+// const accountMovements = accounts
+//   .flatMap(acc => acc.movements)
+//   .reduce((acc, curr) => acc + curr, 0);
+// console.log(accountMovements);
+
+// Sorting arrays
+
+const owners = ['a', 'r', 'f', 'd', 'z', 'q'];
+
+console.log(owners.sort());
+console.log(owners);
+
+// movements.sort((a, b) => {
+//   if (a > b) return 1;
+//   if (b > a) return -1;
+// });
+
+movements.sort((a, b) => a - b);
+// if a is less than b: the result is negative, placing a before b
+// if a is more than b: the result is positive, placing a after b
+
+console.log(movements);
