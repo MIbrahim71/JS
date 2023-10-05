@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ib's TO-DO LIST</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" href="path-to-favicon" />
+    <box-icon name="notepad"></box-icon>
+  </head>
+  <body>
+    <div>
+      <header>
+        <h1>To-Do</h1>
+        <form action="" id="new-task-form">
+        <input id="new-task-input" type="text" placeholder="Add something" />
+        <input id="new-task-submit" type="submit" value="Add" />
+    </form>
+      </header>
+
+    <main>
+
+      <div>
+        <section class="task-list">
+            <h2>Tasks</h2>
+          <div id="tasks">
+            <!-- TASK -->
+            <div class="task">
+            <input type="text" class="text" readonly>
+            </div>
+
+            <!-- EDIT & DELETE--> 
+            <div class="actions">
+                <button class="edit">Edit</button>
+                <button class="delete">Delete</button>
+            </div>
+
+          </div>
+        </section>
+      </div>
+    </div>
+
+    </main>
+  </body>
+
+  <script src="script.js"></script>
+</html>
