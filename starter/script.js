@@ -408,8 +408,8 @@ const flatArr = arr1.flat();
 
 const owners = ['a', 'r', 'f', 'd', 'z', 'q'];
 
-console.log(owners.sort());
-console.log(owners);
+// console.log(owners.sort());
+// console.log(owners);
 
 // movements.sort((a, b) => {
 //   if (a > b) return 1;
@@ -420,4 +420,88 @@ movements.sort((a, b) => a - b);
 // if a is less than b: the result is negative, placing a before b
 // if a is more than b: the result is positive, placing a after b
 
-console.log(movements);
+// console.log(movements);
+
+// Creating and filling arrays: fill(), from()
+
+const x = new Array(7);
+
+// console.log(x); // [] (7) - can only call fill() method
+
+// // x.fill(1); // mutates original array
+// x.fill(1, 3, 5); // works like splice, put 1s from index 3 - 4
+// console.log(x); // [3: 1, 4: 1]
+
+// from
+
+// const y = Array.from({ length: 5 }, () => 1);
+// console.log(y); // [1, 1, 1, 1, 1]
+
+// const z = Array.from({ length: 5 }, (_, i) => i + 1);
+// console.log(z); // [1, 2, 3, 4, 5]
+
+// const diceRoll = Array.from({ length: 12 }, () => Math.ceil(Math.random() * 6));
+// console.log(diceRoll);
+
+labelBalance.addEventListener('click', function () {
+  const movementsUI = Array.from(
+    document.querySelectorAll('.movements__value'),
+    el => Number(el.textContent.replace('€', ''))
+  );
+  const balance = movementsUI.reduce((acc, i) => acc + i, 0);
+  console.log(balance);
+});
+
+// Array Methods practice
+
+// 1
+const bankDepositSum = accounts
+  .flatMap(acc => acc.movements)
+  .filter(mov => mov > 0)
+  .reduce((acc, mov) => acc + mov);
+// console.log(bankDepositSum);
+
+// 2
+// const numDeposits1000 = accounts
+//   .flatMap(mov => mov.movements)
+//   .filter(mov => mov > 1000).length;
+// console.log(numDeposits1000);
+
+const numDeposits1000 = accounts
+  .flatMap(mov => mov.movements)
+  .reduce((acc, cur) => (cur > 1000 ? ++acc : acc), 0); // prefixed ++
+// console.log(numDeposits1000);
+
+// 3
+
+const { deposits, withdrawals } = accounts
+  .flatMap(acc => acc.movements)
+  .reduce(
+    (sum, cur) => {
+      // cur > 0 ? (sum.deposits += cur) : (sum.withdrawals += cur);
+      sum[cur > 0 ? 'deposits' : 'withdrawals'] += cur;
+      return sum;
+    },
+    { deposits: 0, withdrawals: 0 }
+  );
+
+// console.log(deposits, withdrawals);
+
+// 4
+const convertTitle = title => {
+  const capitalise = str => str[0].toUpperCase() + str.slice(1);
+  const exceptions = ['a', 'an', 'the', 'but', 'or', 'on', 'in', 'with'];
+
+  const titleCase = title
+    .toLowerCase()
+    .split(' ')
+    .map(word =>
+      exceptions.includes(word) ? word : word[0].toUpperCase() + word.slice(1)
+    ) // if exceptions includes word, return word. If not, capitalise the first letter.
+    .join(' ');
+  console.log(capitalise(titleCase));
+};
+
+convertTitle('this is a nice title');
+convertTitle('this is a LONG title but not long');
+convertTitle('an other title with EXAMPLE');
