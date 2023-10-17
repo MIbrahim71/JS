@@ -45,6 +45,27 @@ window.addEventListener("load", () => {
     taskList.appendChild(newTask);
 
     // Edit task
+    // Create DOM NOdes
+    const newAction = document.createElement("div");
+    newAction.classList.add("actions");
+
+    const newEdit = document.createElement("button");
+    newEdit.classList.add = "edit";
+    newEdit.innerHTML = "Edit";
+
+    const newDel = document.createElement("button");
+    newDel.classList.add = "delete";
+    newDel.innerHTML = "Delete";
+
+    newAction.appendChild(newEdit);
+    newAction.appendChild(newDel);
+
+    newTask.appendChild(newAction);
+
+    taskList.appendChild(newTask);
+
+    // Clear input bar
+    formInput.value = "";
 
     // Edit & Save functionality
 
