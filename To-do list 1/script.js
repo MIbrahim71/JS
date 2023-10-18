@@ -34,6 +34,7 @@ window.addEventListener("load", () => {
     // Append newContent to newTask
     newTask.appendChild(newContent);
 
+    // Create newInput and set it to task
     const newInput = document.createElement("input");
     newInput.classList.add("text");
     newInput.type = "text";
