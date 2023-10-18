@@ -1,3 +1,10 @@
+:root {
+  --light: #f0ebd8;
+  --bg: #1d2d44;
+  --container: #3e5c76;
+  --new: #748cab;
+}
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -72,7 +79,7 @@ body {
   flex-direction: column;
   align-items: center;
   min-height: 100vh;
-  background-color: darkslategray;
+  background-color: var(--bg);
 }
 
 .all {
@@ -89,6 +96,7 @@ header {
 header h1 {
   font-size: 3rem;
   margin-bottom: 2rem;
+  color: var(--light);
 }
 
 #new-task-form {
@@ -101,6 +109,7 @@ button {
   appearance: none;
   border: none;
   outline: none;
+  color: #f0ebd8;
 }
 
 #new-task-input {
@@ -110,7 +119,7 @@ button {
   font-size: 1.5rem;
   margin-right: 2rem;
   border-radius: 1rem;
-  background-color: gainsboro;
+  background-color: var(--container);
 }
 
 #new-task-input::placeholder {
@@ -148,6 +157,8 @@ main {
 .task-list h2 {
   font-size: 2.5rem;
   margin-bottom: 1rem;
+  color: var(--light);
+  font-weight: lighter;
 }
 
 #tasks {
@@ -160,7 +171,7 @@ main {
   width: 100%;
   display: flex;
   justify-content: space-between;
-  background-color: rgba(220, 220, 220, 0.117);
+  background-color: var(--container);
   padding: 0.5rem 1rem;
   margin: 1rem 0;
   border-radius: 0.5rem;
@@ -170,7 +181,7 @@ main {
   height: 2.25rem;
   font-size: 1.125rem;
   width: 90%;
-  color: white;
+  color: var(--light);
 }
 
 .task .content {
