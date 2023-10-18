@@ -67,6 +67,7 @@ window.addEventListener("load", () => {
 
     // Clear input bar
     formInput.value = "";
+    formInput.blur();
 
     // Edit & Save functionality
     newEdit.addEventListener("click", () => {
@@ -78,7 +79,7 @@ window.addEventListener("load", () => {
         // Anything else upon click (save), change it back to normal
       } else {
         newInput.setAttribute("readonly", "readonly");
-        newEdit.innerText = "edit";
+        newEdit.innerText = "Edit";
       }
     });
 

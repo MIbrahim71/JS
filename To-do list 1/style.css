@@ -91,6 +91,7 @@ header {
   max-width: 90%;
   width: 800px;
   margin: 0 auto;
+  margin-top: 2rem;
 }
 
 header h1 {
@@ -145,6 +146,7 @@ main {
   max-width: 800px;
   width: 100%;
   margin: 0 4rem;
+  margin-top: 3rem;
 }
 
 .task-list {
@@ -155,7 +157,7 @@ main {
 }
 
 .task-list h2 {
-  font-size: 2.5rem;
+  font-size: 2.25rem;
   margin-bottom: 1rem;
   color: var(--light);
   font-weight: lighter;
@@ -172,7 +174,7 @@ main {
   display: flex;
   justify-content: space-between;
   background-color: var(--container);
-  padding: 0.5rem 1rem;
+  padding: 0.25rem 1rem;
   margin: 1rem 0;
   border-radius: 0.5rem;
 }
@@ -200,12 +202,11 @@ main {
 }
 
 .actions button {
-  font-size: 1.4rem;
+  font-size: 1.25rem;
   background-color: transparent;
   border-radius: 0.5rem;
   cursor: pointer;
   margin-left: 0.5rem;
-  text-transform: uppercase;
 }
 
 .actions button:hover {
