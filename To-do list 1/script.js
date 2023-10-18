@@ -68,7 +68,22 @@ window.addEventListener("load", () => {
     formInput.value = "";
 
     // Edit & Save functionality
+    newEdit.addEventListener("click", () => {
+      // Upon click, if the edit button is 'edit' then allow editing
+      if (newEdit.innerText.toLowerCase() == "edit") {
+        newInput.removeAttribute("readonly");
+        newInput.focus();
+        newEdit.innerText = "Save";
+        // Anything else upon click (save), change it back to normal
+      } else {
+        newInput.setAttribute("readonly", "readonly");
+        newEdit.innerText = "edit";
+      }
+    });
 
     // Delete task
+    newDel.addEventListener("click", () => {
+      taskList.removeChild(newTask);
+    });
   });
 });
