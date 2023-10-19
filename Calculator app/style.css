@@ -31,6 +31,7 @@ body {
   flex-direction: column;
   gap: 14px;
   min-height: 400px;
+  /* stops button squishing when decreasing height */
 }
 
 .display {
@@ -70,7 +71,6 @@ body {
 .smRow .btn {
   padding-top: 1.5rem !important;
   padding-bottom: 1.5rem !important;
-  background-color: orange;
 }
 
 .smRow > button:nth-child(1),
@@ -80,11 +80,12 @@ body {
 }
 
 .btn {
-  padding: 3rem 1rem;
+  border: 2px solid var(--text-color);
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  padding: 3rem 0rem;
   font-size: 2rem;
-  border: 2px solid black;
-  background-color: lightslategrey;
-  border-radius: 0.5rem;
+  border-radius: 8px;
   display: grid;
   place-items: center;
   cursor: pointer;
