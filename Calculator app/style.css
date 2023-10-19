@@ -35,15 +35,15 @@ body {
 
 .display {
   background: var(--bg-light);
-  padding: 14px;
+  padding: 30px 14px;
   border-radius: 8px;
   border: 2px solid var(--text-color);
   flex: 1;
   display: flex;
   align-items: center;
   justify-content: end;
-  font-size: 1.6rem;
-  line-height: 1rem;
+  font-size: 1.8rem;
+  line-height: 1.5rem;
   overflow: hidden;
 }
 
@@ -67,7 +67,39 @@ body {
   gap: 14px;
 }
 
+.smRow .btn {
+  padding-top: 1.5rem !important;
+  padding-bottom: 1.5rem !important;
+  background-color: orange;
+}
+
+.smRow > button:nth-child(1),
+.smRow > button:nth-child(2) {
+  background: white !important;
+  color: var(--bg-color) !important;
+}
+
 .btn {
-  padding: 4rem 1rem;
+  padding: 3rem 1rem;
   font-size: 2rem;
+  border: 2px solid black;
+  background-color: lightslategrey;
+  border-radius: 0.5rem;
+  display: grid;
+  place-items: center;
+  cursor: pointer;
+  transition-duration: 200ms;
+}
+
+.btn:hover {
+  opacity: 0.8;
+}
+
+.btn p {
+  font-size: 2rem;
+}
+
+.btnRow:last-child > .btn:nth-child(3) {
+  border-color: var(--bg-color);
+  background: white;
 }
