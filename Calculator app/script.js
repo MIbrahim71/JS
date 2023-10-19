@@ -11,13 +11,12 @@ let currValue = "";
 // MAIN Interaction function
 const handleInteraction = (val) => {
   if (operators.includes(val)) {
-    console.log("Clicked operator: ", val);
     handleOperatorInput(val);
   } else {
-    console.log("Clicked numeric: ", val);
     handleNumericInput(val);
   }
   updateUI();
+  console.log(currValue);
 };
 
 // Click Number
@@ -31,6 +30,10 @@ const handleOperatorInput = (val) => {
   // Guard clause making sure operator isn't first click
   if (!currValue) {
     return;
+  }
+
+  if (val === "%") {
+    currValue / (val * 100);
   }
 
   operations.push(currValue);
