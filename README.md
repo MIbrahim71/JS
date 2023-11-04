@@ -1,2 +1,5 @@
 # JS
-All beginner JS projects 🤠
+All my beginner JS projects 🤠
+
+To-Do List
+Calculator
