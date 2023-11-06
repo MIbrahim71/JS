@@ -1,5 +1,5 @@
 # JS
 All my beginner JS projects 🤠
 
-To-Do List
-Calculator
+- To-Do List \n
+- Calculator
