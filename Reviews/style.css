@@ -6,7 +6,7 @@
 }
 
 body {
-  background-color: rgb(224, 225, 221);
+  background-color: rgb(27, 38, 59);
 }
 
 main {
@@ -19,6 +19,7 @@ section {
   height: 90vh;
   margin: 5rem 0;
   margin-top: 10rem;
+  padding-top: 5rem;
 }
 
 .title {
@@ -28,11 +29,11 @@ section {
 
 h1 {
   font-size: 4rem;
-  color: rgb(27, 38, 59);
+  color: rgb(224, 225, 221);
 }
 
 .divider {
-  background-color: rgb(119, 141, 169);
+  background-color: rgb(65, 90, 119);
   display: flex;
   justify-content: center;
   max-width: 20%;
@@ -43,12 +44,13 @@ h1 {
 }
 
 .review {
-  height: 55vh;
+  height: 50vh;
   border: 0.2rem solid rgb(13, 27, 42);
   border-radius: 1rem;
   text-align: center;
   padding: 1.5rem 2rem;
-  background-color: white;
+  margin-top: 5rem;
+  background-color: rgb(224, 225, 221);
   box-shadow: 2px 2px 10px rgb(0, 0, 0, 0.5);
 }
 
@@ -65,7 +67,7 @@ h1 {
 .img img {
   width: 100%;
   height: 100%;
-  background-color: black;
+  background-color: rgb(119, 141, 169);
   border-radius: 50%;
   object-fit: cover;
 }
@@ -73,6 +75,7 @@ h1 {
 #author {
   font-size: 40px;
   margin-bottom: 1rem;
+  letter-spacing: 0.2rem;
 }
 
 #job {
