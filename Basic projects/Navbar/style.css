@@ -7,8 +7,8 @@
 }
 body {
   font-family: Arial, Helvetica, sans-serif;
-  background: darkblue;
-  color: black;
+  background: beige;
+  color: white;
   line-height: 1.5;
   font-size: 0.875rem;
 }
@@ -42,7 +42,7 @@ h4 {
 }
 p {
   margin-bottom: 1.25rem;
-  color: black;
+  color: white;
 }
 @media screen and (min-width: 800px) {
   h1 {
@@ -91,7 +91,7 @@ main {
 }
 
 nav {
-  background: lightcyan;
+  background: darkslategrey;
 }
 .nav-header {
   display: flex;
@@ -101,7 +101,7 @@ nav {
 }
 .nav-toggle {
   font-size: 1.5rem;
-  color: grey;
+  color: white;
   background: transparent;
   border-color: transparent;
   transition: 0.5s;
@@ -115,7 +115,7 @@ nav {
   height: 40px;
 }
 .links a {
-  color: grey;
+  color: whitesmoke;
   font-size: 1rem;
   text-transform: capitalize;
   letter-spacing: 1;
@@ -125,8 +125,7 @@ nav {
 }
 
 .links a:hover {
-  background: blue;
-  color: black;
+  opacity: 0.5;
   padding-left: 1.5rem;
 }
 .social-icons {
@@ -174,8 +173,8 @@ nav {
   }
   .social-icons a {
     margin: 0 0.5rem;
-    color: var(--clr-primary-5);
-    transition: var(--transition);
+    color: white;
+    transition: 0.5s;
   }
   .social-icons a:hover {
     color: var(--clr-primary-7);
