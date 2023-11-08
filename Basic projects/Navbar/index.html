@@ -2,37 +2,43 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style.css" />
     <title>Navbar</title>
+    <!-- font-awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
+    />
+
+    <!-- styles -->
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <nav class="nav">
+    <nav>
       <div class="nav-center">
-        <!-- HEADER -->
+        <!-- nav header -->
         <div class="nav-header">
-          <img src="" alt="" />
-          <button class="nav-toggle"></button>
+          <img src="./logo.svg" class="logo" alt="logo" />
+          <button class="nav-toggle">
+            <i class="fas fa-bars"></i>
+          </button>
         </div>
-
-        <!-- LINKS -->
+        <!-- links -->
         <ul class="links">
           <li>
-            <a href="index.html">home</a>
+            <a href="#">home</a>
           </li>
           <li>
-            <a href="about.html">about</a>
+            <a href="#">about</a>
           </li>
           <li>
-            <a href="projects.html">projects</a>
+            <a href="#">projects</a>
           </li>
           <li>
-            <a href="contact.html">contact</a>
+            <a href="#">contact</a>
           </li>
         </ul>
-
-        <!-- SOCIAL MEDIA LINKS -->
+        <!-- social media -->
         <ul class="social-icons">
           <li>
             <a href="https://www.twitter.com">
@@ -62,8 +68,7 @@
         </ul>
       </div>
     </nav>
-
-    <h1>Welcome</h1>
+    <!-- javascript -->
     <script src="script.js"></script>
   </body>
 </html>
