@@ -44,7 +44,7 @@ h1 {
 }
 
 .review {
-  height: 40vh;
+  height: 50%;
   border: 0.2rem solid rgb(13, 27, 42);
   border-radius: 1rem;
   text-align: center;
