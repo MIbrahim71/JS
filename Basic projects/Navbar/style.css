@@ -58,7 +58,7 @@ p {
     font-size: 1rem;
   }
   body {
-    font-size: 1rem;
+    font-size: 2rem;
   }
   h1,
   h2,
@@ -92,6 +92,7 @@ main {
 
 nav {
   background: darkslategrey;
+  padding: 2rem 0;
 }
 .nav-header {
   display: flex;
@@ -116,7 +117,7 @@ nav {
 }
 .links a {
   color: whitesmoke;
-  font-size: 1rem;
+  font-size: 1.5rem;
   text-transform: capitalize;
   letter-spacing: 1;
   display: block;
