@@ -35,6 +35,41 @@ button {
   background-color: white;
 }
 
-.overlay {
-  opacity: 0.5;
+.modal-overlay {
+  z-index: -10;
+  visibility: hidden;
+}
+
+.modal {
+  width: 50vw;
+  height: 30vh;
+  background-color: black;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  padding: 20px;
+  opacity: 1 !important;
+}
+
+h3 {
+  font-size: 3rem;
+  display: flex;
+  justify-content: center;
+}
+
+.close {
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
+  padding: 1rem 1rem;
+  font-size: 1rem;
+  text-align: right;
+  color: red;
+}
+
+.open-modal {
+  visibility: visible;
+  z-index: 10;
 }
