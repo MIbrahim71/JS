@@ -5,7 +5,8 @@ questions.forEach((question) => {
   // Select that specific button
   const btn = question.querySelector(".question-btn");
 
-  btn.addEventListener("click", function () {
+  // Either add event listener to whole question box, or just the button
+  question.addEventListener("click", function () {
     questions.forEach(function (item) {
       if (item !== question) {
         // If item is not the clicked question, remove show-text (hide)
