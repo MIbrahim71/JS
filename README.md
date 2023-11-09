@@ -2,4 +2,4 @@
 All my beginner JS projects 🤠
 
 - To-Do List
-- Calculator
+- Calculator https://polite-naiad-8fc86e.netlify.app
