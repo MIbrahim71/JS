@@ -15,6 +15,5 @@ questions.forEach((question) => {
     });
     // Else (clicked question) -> toggle visibility based on current state
     question.classList.toggle("show-text");
-    console.log("Close");
   });
 });
