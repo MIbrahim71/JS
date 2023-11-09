@@ -1,14 +1,14 @@
 const questions = document.querySelectorAll(".question");
 
-// Run through each question
+// Loop through each question
 questions.forEach((question) => {
+  // Select that specific button
   const btn = question.querySelector(".question-btn");
 
   btn.addEventListener("click", function () {
-    // When btn is clicked, if item (that question) is not equal to question, then hide item
+    // When btn is clicked, if there are any items (other questions) not equal to the specific question, then hide items
     questions.forEach(function (item) {
       if (item !== question) {
-        console.log("Open");
         item.classList.remove("show-text");
       }
     });
