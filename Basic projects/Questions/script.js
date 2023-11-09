@@ -6,13 +6,13 @@ questions.forEach((question) => {
   const btn = question.querySelector(".question-btn");
 
   btn.addEventListener("click", function () {
-    // When btn is clicked, if there are any items (other questions) not equal to the specific question, then hide items
     questions.forEach(function (item) {
       if (item !== question) {
+        // If item is not the clicked question, remove show-text (hide)
         item.classList.remove("show-text");
       }
     });
-    // If not, show item
+    // Else (clicked question) -> toggle visibility based on current state
     question.classList.toggle("show-text");
     console.log("Close");
   });
