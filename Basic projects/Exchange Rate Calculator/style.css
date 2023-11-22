@@ -1,0 +1,43 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  padding: 50px;
+  height: 100vh;
+}
+
+h1 {
+  font-size: 5rem;
+  padding: 3rem 0rem;
+}
+
+p {
+  font-size: 2rem;
+}
+
+.container {
+  margin: 4rem 0rem;
+}
+
+.currency {
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.currency select {
+  background: transparent;
+  padding: 2rem;
+  border: 1px solid grey;
+  font-size: 2rem;
+}
