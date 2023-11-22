@@ -47,6 +47,7 @@ p {
 .currency input {
   font-size: 2.5rem;
   border: 0;
+
   background: transparent;
   text-align: right;
 }
@@ -85,4 +86,10 @@ select:focus,
 input:focus,
 button:focus {
   outline: none;
+}
+
+@media screen and (min-width: 900px) {
+  h1 {
+    color: red;
+  }
 }
