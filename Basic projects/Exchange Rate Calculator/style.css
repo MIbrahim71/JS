@@ -39,16 +39,25 @@ p {
 .currency select {
   background: transparent;
   appearance: none;
-  padding: 1rem 3rem;
+  padding: 1rem 2.5rem;
   border: 1px solid grey;
   font-size: 2rem;
 }
 
 .currency input {
-  padding: 1rem 2rem;
-  font-size: 2rem;
-  border: none;
+  font-size: 2.5rem;
+  border: 0;
+  background: transparent;
   text-align: right;
+}
+
+.currency input:valu {
+  color: red;
+}
+
+.currency input::placeholder {
+  font-size: 2.5rem;
+  padding: 1rem 2rem;
 }
 
 .swap-rate-container {
@@ -70,4 +79,10 @@ p {
   border-radius: 10px;
   font-size: 1.5rem;
   cursor: pointer;
+}
+
+select:focus,
+input:focus,
+button:focus {
+  outline: none;
 }
