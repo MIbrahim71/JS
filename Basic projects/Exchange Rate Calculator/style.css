@@ -26,10 +26,11 @@ p {
 
 .container {
   margin: 4rem 0rem;
+  width: 20%;
 }
 
 .currency {
-  padding: 1rem;
+  padding: 2rem 0;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -37,7 +38,36 @@ p {
 
 .currency select {
   background: transparent;
-  padding: 2rem;
+  appearance: none;
+  padding: 1rem 3rem;
   border: 1px solid grey;
   font-size: 2rem;
+}
+
+.currency input {
+  padding: 1rem 2rem;
+  font-size: 2rem;
+  border: none;
+  text-align: right;
+}
+
+.swap-rate-container {
+  display: flex;
+  justify-content: space-between;
+  padding: 2rem 0;
+  align-items: baseline;
+}
+
+#swap-p {
+  color: green;
+}
+
+#swap-btn {
+  padding: 1rem;
+  background-color: green;
+  color: white;
+  border: 1px solid grey;
+  border-radius: 10px;
+  font-size: 1.5rem;
+  cursor: pointer;
 }
