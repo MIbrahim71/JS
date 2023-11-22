@@ -14,7 +14,7 @@ function calculate() {
     .then((data) => {
       // console.log(data);
       const rate = data.rates[currency2] / data.rates[currency1];
-      console.log(rate);
+      // console.log(rate);
       rateEl.innerText = `1 ${currency1} = ${rate.toFixed(3)} ${currency2}`;
       amount2.value = (amount1.value * rate).toFixed(2);
     });
