@@ -22,7 +22,7 @@ h1 {
 }
 
 p {
-  font-size: 2rem;
+  font-size: 2.2rem;
 }
 
 .container {
@@ -93,6 +93,11 @@ p {
   border-radius: 10px;
   font-size: 1.75rem;
   cursor: pointer;
+}
+
+#swap-btn:hover {
+  opacity: 0.8;
+  transition: 0.3s;
 }
 
 select:focus,

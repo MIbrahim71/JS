@@ -26,3 +26,12 @@ amount1.addEventListener("input", calculate);
 amount2.addEventListener("input", calculate);
 
 calculate();
+
+swap.addEventListener("click", function () {
+  const item = currencyEl_one.value;
+
+  currencyEl_one.value = currencyEl_two.value;
+  currencyEl_two.value = item;
+
+  calculate();
+});
